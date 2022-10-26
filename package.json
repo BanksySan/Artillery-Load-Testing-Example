@@ -1,0 +1,12 @@
+{
+  "name": "load-testing",
+  "version": "1.0.0",
+  "description": "Testing Artillery.",
+  "documentation": "https://www.artillery.io/docs",
+  "keywords": [],
+  "author": "David Banks",
+  "license": "ISC",
+  "devDependencies": {
+    "artillery": "^2.0.0-23"
+  }
+}

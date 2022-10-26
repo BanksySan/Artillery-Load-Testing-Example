@@ -1,0 +1,36 @@
+config:
+# Config contains environment configuration
+ target: http://127.0.0.1:3001/api
+ phases:
+  - duration: 10
+    arrivalRate: 5
+    name: warm-up
+  - duration: 20
+    arrivalRate: 5
+    ampTo: 10
+    name: Ramp up load
+  - duration: 10
+    arrivalRate: 50
+    name: Sustained load
+ payload:
+  path: keywords.csv
+  fields:
+   - "keyword"
+scenarios:
+# Scenarios contain VU behaviour
+  - name: "Search and buy"
+    flow:
+      - post:
+         url: "/search"
+         json:
+           kw: "{{ keyword }}"
+         capture:
+          - json: "$.results[0].id"
+            as: "productId"
+      - get:
+          url: "/product/{{ productId }}/details"
+      - think: 5
+      - post:
+         url: "/cart"
+         json:
+           productId: "{{ productId }}"
