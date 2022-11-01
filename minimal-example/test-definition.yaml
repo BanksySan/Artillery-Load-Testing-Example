@@ -1,0 +1,12 @@
+config:
+  target: "http://127.0.0.1:3001/api"
+  phases:
+  - duration: 1    # Number of seconds to run
+    arrivalRate: 10 # Number of users per second
+scenarios:
+  - flow:
+    - get:
+        url: "/echo/hello-world-1"
+  - flow:
+    - get:
+        url: "/echo/hello-world-2"

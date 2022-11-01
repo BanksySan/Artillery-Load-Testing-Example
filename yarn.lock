@@ -1600,7 +1600,7 @@ artillery-plugin-expect@^2.1.0:
     debug "^4.3.2"
     lodash "^4.17.21"
 
-artillery-plugin-metrics-by-endpoint@^1.0.2:
+artillery-plugin-metrics-by-endpoint@1.0.2, artillery-plugin-metrics-by-endpoint@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/artillery-plugin-metrics-by-endpoint/-/artillery-plugin-metrics-by-endpoint-1.0.2.tgz#268928dbd4938cfd7b08ccf84d4ada20f009cf99"
   integrity sha512-/dDlmDhG/tM6zOPJ/AktrbWvYXKfgaT48P6EmYLvb3erq+f5Z06AKKlpqoVRoWfcMYPMVX0Kde5fnaQnnW6CmA==

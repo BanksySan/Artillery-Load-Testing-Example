@@ -10,16 +10,21 @@
     {
       "uuid": "2930700a-f72c-4352-a9ce-504cf3defbc5",
       "documentation": "",
-      "method": "post",
-      "endpoint": "search",
+      "method": "get",
+      "endpoint": "return-301",
       "responses": [
         {
           "uuid": "9d196426-56e0-42c4-bef5-1ccc52f6a475",
-          "body": "{\n  \"results\": [\n    {\n      \"id\": \"dummy-id-1\"\n    }\n  ]\n}",
+          "body": "",
           "latency": 0,
-          "statusCode": 200,
+          "statusCode": 301,
           "label": "",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Location",
+              "value": "dummy.example.com"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -70,6 +75,33 @@
         {
           "uuid": "9058fa20-9dff-498e-bab2-f731da3e3457",
           "body": "{\n  \n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "e7850685-e849-4419-9576-fec6d95a7f6f",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "echo/:message",
+      "responses": [
+        {
+          "uuid": "fc2f673a-9dbd-428f-ac70-28da6de00f4c",
+          "body": "{\n  \"message\": \"{{urlParam 'message'}}\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",

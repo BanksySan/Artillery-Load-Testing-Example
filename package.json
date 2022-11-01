@@ -3,10 +3,19 @@
   "version": "1.0.0",
   "description": "Testing Artillery.",
   "documentation": "https://www.artillery.io/docs",
+  "scripts": {
+    "run:data-driven": "artillery run data-driven-example/test-definition.yaml",
+    "run:minimal": "artillery run minimal-example/test-definition.yaml",
+    "run:plugin": "artillery run plugin-example/test-definition.yaml"
+  },
   "keywords": [],
   "author": "David Banks",
   "license": "ISC",
   "devDependencies": {
-    "artillery": "^2.0.0-23"
+    "artillery": "^2.0.0-23",
+    "artillery-plugin-metrics-by-endpoint": "1.0.2"
+  },
+  "volta": {
+    "node": "16.18.0"
   }
 }
