@@ -4,9 +4,9 @@
   "description": "Testing Artillery.",
   "documentation": "https://www.artillery.io/docs",
   "scripts": {
-    "run:data-driven": "artillery run data-driven-example/test-definition.yaml",
-    "run:minimal": "artillery run minimal-example/test-definition.yaml",
-    "run:plugin": "artillery run plugin-example/test-definition.yaml"
+    "run:data-driven": "artillery run data-driven-example/test-definition.yaml --output logs/data-driven-log.json",
+    "run:minimal": "artillery run minimal-example/test-definition.yaml --output logs/minimal-log.json",
+    "run:plugin": "artillery run plugin-example/test-definition.yaml --output logs/plugin-log.json"
   },
   "keywords": [],
   "author": "David Banks",
