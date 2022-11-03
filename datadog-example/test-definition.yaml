@@ -1,0 +1,42 @@
+config:
+  plugins:
+    publish-metrics:
+      - type: datadog,
+        apiKey: "{{ $processEnvironment.DATADOG_API_KEY }}"
+        host: https://api.datadoghq.eu,
+        prefix: djb-artillery-poc,
+        tags:
+          - "env:dev"
+          - "service:one-web"
+          - "team:core-web"
+        event:
+          title: "Plugin integration test"
+          priority: high
+          tags:
+            - "env:dev"
+            - "service:one-web"
+            - "team:core-web"
+  target: "http://127.0.0.1:3000"
+  name: DataDog Example
+  phases:
+  - duration: 5
+    arrivalRate: 50
+scenarios:
+  - flow:
+      - get:
+          url: "/echo/hello-world-1"
+  - flow:
+      - get:
+          url: "/echo/hello-world-2"
+  - flow:
+      - get:
+          url: "/echo/hello-world-3"
+  - flow:
+      - get:
+          url: "/echo/hello-world-4"
+  - flow:
+      - get:
+          url: "/echo/hello-world-5"
+  - flow:
+      - get:
+          url: "/echo/hello-world-6"

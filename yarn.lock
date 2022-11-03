@@ -1607,7 +1607,7 @@ artillery-plugin-metrics-by-endpoint@1.0.2, artillery-plugin-metrics-by-endpoint
   dependencies:
     debug "^4.3.2"
 
-artillery-plugin-publish-metrics@^2.0.1:
+artillery-plugin-publish-metrics@2.0.1, artillery-plugin-publish-metrics@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/artillery-plugin-publish-metrics/-/artillery-plugin-publish-metrics-2.0.1.tgz#df041c6a98a8065d67cb6b071f880dc590d9ea54"
   integrity sha512-Dy7hxLAXHEo5ILTqF4DOAmrQZnHVzAi1QJ2wFZMPvWHNUxdS4UudO4DACBvVMeu1LRbRFUYB3wyalNW8W2VqOg==
