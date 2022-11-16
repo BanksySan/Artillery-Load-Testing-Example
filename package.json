@@ -6,7 +6,13 @@
   "scripts": {
     "run:data-driven": "artillery run data-driven-example/test-definition.yaml --output logs/data-driven-log.json",
     "run:minimal": "artillery run minimal-example/test-definition.yaml --output logs/minimal-log.json",
-    "run:plugin": "artillery run plugin-example/test-definition.yaml --output logs/plugin-log.json"
+    "run:plugin": "artillery run plugin-example/test-definition.yaml --output logs/plugin-log.json",
+    "run:datadog": "artillery run datadog-example/test-definition.yaml --output logs/datadog-log.json",
+
+    "report:data-driven": "artillery report output logs/data-driven-log.json --output logs/data-driven-log-report.html",
+    "report:minimal": "artillery report logs/minimal-log.json --output logs/minimal-log-report.html",
+    "report:plugin": "artillery report logs/plugin-log.json --output logs/plugin-log-report.html",
+    "report:datadog": "artillery report logs/datadog-log.json --output logs/datadog-log-report.html"
   },
   "keywords": [],
   "author": "David Banks",
